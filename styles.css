@@ -205,3 +205,24 @@ button {
     top: -3000px;
   }
 }
+
+/* Blog section */
+#blog-container {
+  margin-top: 30px;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.text-color {
+  color: white;
+  text-align: justify;
+}
+
+.each-div {
+  margin: 20px;
+}
