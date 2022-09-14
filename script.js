@@ -43,7 +43,7 @@ const typeController = (e) => {
   const newLetterCorrect = validate(newLetter);
 
   // if it is not a valid character increaser errorCount
-  if (!newLetterCorrect) {                                       // error count fixed in modal
+  if (!newLetterCorrect) {                              // ------------------error count fixed in modal
     errorCount++;
   }
 
@@ -73,7 +73,7 @@ const gameOver = () => {
   // the current time is the finish time
   // so total time taken is current time - start time
   const finishTime = new Date().getTime();
-  const timeTaken = (finishTime - startTime) / 1000;
+  const timeTaken = parseInt((finishTime - startTime) / 1000);  //----------------- count time in integer in modal fixed 
 
   // show result modal
   resultModal.innerHTML = "";
@@ -141,7 +141,7 @@ displayHistory();
 setInterval(() => {
   const currentTime = new Date().getTime();
   const timeSpentFloat = (currentTime - startTime) / 1000;
-  const timeSpent = parseInt(timeSpentFloat);                     // Changed time in interger (ParseInt)
+  const timeSpent = parseInt(timeSpentFloat);    // ------------- Changed time in integer (ParseInt)
 
 
   document.getElementById("show-time").innerHTML = `${startTime ? timeSpent : 0} seconds`;
