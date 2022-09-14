@@ -89,12 +89,6 @@ body {
 .blog-button {
   margin-top: 30px;
   margin-right: 15%;
-  background-color: tomato;
-  width: 150px;
-  height: 50px;
-  border-radius: 10px;
-  font-size: larger;
-  border-style: none;
 }
 
 .blog-button a {

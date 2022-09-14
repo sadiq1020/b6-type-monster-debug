@@ -1,6 +1,6 @@
 const display = document.getElementById("display");
 const question = document.getElementById("question");
-const startBtn = document.getElementById("starts");                  // starts s was missing
+const startBtn = document.getElementById("starts");      //-------------------- starts s was missing
 const countdownOverlay = document.getElementById("countdown");
 const resultModal = document.getElementById("result");
 const modalBackground = document.getElementById("modal-background");
@@ -129,10 +129,8 @@ const start = () => {
   }, 1000);
 };
 
-// clearInterval();
-
 // START Countdown
-startBtn.addEventListener("click", start);    // -------------- no changed ()
+startBtn.addEventListener("click", start);
 
 // If history exists, show it
 displayHistory();
