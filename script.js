@@ -42,11 +42,17 @@ const typeController = (e) => {
 
   const newLetterCorrect = validate(newLetter);
 
+  // if it is not a valid character increaser errorCount
+  if (!newLetterCorrect) {                                       // error count fixed in modal
+    errorCount++;
+  }
+
   if (newLetterCorrect) {
     display.innerHTML += `<span class="green">${newLetter === " " ? "▪" : newLetter}</span>`;
   } else {
     display.innerHTML += `<span class="red">${newLetter === " " ? "▪" : newLetter}</span>`;
   }
+
 
   // check if given question text is equal to user typed text
   if (questionText === userText) {
@@ -113,7 +119,7 @@ const start = () => {
     if (count == 0) {
       // -------------- START TYPING -----------------
       document.addEventListener("keydown", typeController);
-      countdownOverlay.style.display = "none";
+      countdownOverlay.style.display = "none";  // -------------------- changed from flex to none
       display.classList.remove("inactive");
 
       clearInterval(startCountdown);
@@ -123,7 +129,7 @@ const start = () => {
   }, 1000);
 };
 
-clearInterval();
+// clearInterval();
 
 // START Countdown
 startBtn.addEventListener("click", start);    // -------------- no changed ()
