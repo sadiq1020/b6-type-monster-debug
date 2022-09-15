@@ -59,7 +59,30 @@
                     variables from within the curly brackets { }.</p>
             </li>
             <br><br>
-
+            <li>
+                <h3>How does Event loop works in java scrtpt?</h3><br>
+                The event loop is a mechanism that allows JavaScript to perform non-blocking operations. It is
+                an endless loop, which waits for tasks, executes them and then sleeps until it receives
+                more tasks. When an asynchronous task is started, the event loop will start running. The event loop
+                executes tasks from the event queue only when the call stack is empty i.e.
+                there is no ongoing task. The event loop allows us to use callbacks and promises.
+            </li>
+            <br><br>
+            <li>
+                <h3>How many way can get undefined in Javascript:</h3><br>
+                <ul>
+                    <p>There are total 8 ways, we can get "undefined" in Java script</p>
+                    <li>Variable that is not initialized, will give undefined</li>
+                    <li>Function declared with no return, will give undefined</li>
+                    <li>parameter that is not passed, will be undefined</li>
+                    <li>Inside a function, if return has nothing on the right side, will give undefined</li>
+                    <li>Property that doesn't exist on an object, will give undefined</li>
+                    <li>Accessing array elements outside of the index range, will give undefined</li>
+                    <li>Deleting an element inside an array, will give undefined</li>
+                    <li>Variable that is not initialized, will give undefined</li>
+                    And also typeOf undefined is undefined.
+                </ul>
+            </li>
         </ol>
     </main>
 </body>
