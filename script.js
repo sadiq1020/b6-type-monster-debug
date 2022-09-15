@@ -1,6 +1,6 @@
 const display = document.getElementById("display");
 const question = document.getElementById("question");
-const startBtn = document.getElementById("starts");      //-------------------- starts s was missing
+const startBtn = document.getElementById("starts");
 const countdownOverlay = document.getElementById("countdown");
 const resultModal = document.getElementById("result");
 const modalBackground = document.getElementById("modal-background");
@@ -43,7 +43,7 @@ const typeController = (e) => {
   const newLetterCorrect = validate(newLetter);
 
   // if it is not a valid character increaser errorCount
-  if (!newLetterCorrect) {                              // ------------------error count fixed in modal
+  if (!newLetterCorrect) {
     errorCount++;
   }
 
@@ -73,7 +73,7 @@ const gameOver = () => {
   // the current time is the finish time
   // so total time taken is current time - start time
   const finishTime = new Date().getTime();
-  const timeTaken = parseInt((finishTime - startTime) / 1000);  //----------------- count time in integer in modal fixed 
+  const timeTaken = parseInt((finishTime - startTime) / 1000);
 
   // show result modal
   resultModal.innerHTML = "";
@@ -113,13 +113,13 @@ const start = () => {
   countdownOverlay.style.display = "flex";
 
   const startCountdown = setInterval(() => {
-    countdownOverlay.innerHTML = `<h1>${count}</h1>`; // ------------------ changed '' to ``
+    countdownOverlay.innerHTML = `<h1>${count}</h1>`;
 
     // finished timer
     if (count == 0) {
       // -------------- START TYPING -----------------
       document.addEventListener("keydown", typeController);
-      countdownOverlay.style.display = "none";  // -------------------- changed from flex to none
+      countdownOverlay.style.display = "none";
       display.classList.remove("inactive");
 
       clearInterval(startCountdown);
@@ -139,8 +139,7 @@ displayHistory();
 setInterval(() => {
   const currentTime = new Date().getTime();
   const timeSpentFloat = (currentTime - startTime) / 1000;
-  const timeSpent = parseInt(timeSpentFloat);    // ------------- Changed time in integer (ParseInt)
-
+  const timeSpent = parseInt(timeSpentFloat);
 
   document.getElementById("show-time").innerHTML = `${startTime ? timeSpent : 0} seconds`;
 }, 1000);
